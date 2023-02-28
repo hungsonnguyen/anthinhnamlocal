@@ -1,0 +1,18 @@
+.page-blogs {
+    h4 {
+        color: $main-co;
+        text-transform: uppercase;
+    }
+
+    .sub-title-search {
+        &::before {
+            content: ' ';
+            border-left: $main-co solid 2px;
+            height: 120%;
+            margin-right: 10px;
+        }
+        color: #3C3C3C;
+        font-weight: 500;
+    }
+    
+}

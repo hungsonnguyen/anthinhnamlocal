@@ -1,0 +1,213 @@
+div.section__contact {
+  .contact-content {
+
+    h3 {
+      text-transform: uppercase;
+      color: #241100;
+      padding: 16px 0 16px;
+
+      font: {
+        size: 32px;
+        weight: 700;
+      }
+
+      margin: 0;
+    }
+
+    p {
+      margin: 0 0 12px;
+
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .contact__info {
+    margin: {
+      top: 30px;
+      bottom: 27px;
+    }
+
+    .logo-info {
+      img {
+        width: 138px;
+        height: 126px;
+      }
+    }
+  }
+
+  ;
+
+  .contact-content {}
+}
+
+
+.contact__form {
+  background-color: #F6F7F8;
+
+  .btn-cus {
+    text-align: center;
+    height: 44px;
+    width: 85px;
+    border-radius: 8px;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  padding: {
+    top: 81px;
+    bottom: 81px;
+  }
+
+  .wpcf7 {
+    span {
+      textarea.wpcf7-textarea {
+        height: 125px;
+      }
+    }
+  }
+
+  .wpcf7-spinner {
+    position: relative;
+    top: 9px;
+    background-color: $main-co;
+  }
+
+  input {}
+
+  label {
+    width: 100%;
+  }
+
+  .wpcf7-form-control-wrap {
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .contact-text {
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+
+
+div.section__google-map {
+  iframe {
+    height: 708px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  div.section__contact {
+    h3 {
+      text-align: center;
+    }
+
+
+    .contact-content {
+      h3 {
+        font: {
+          size: 22px;
+        }
+      }
+    }
+
+    .contact__info {
+      margin: {
+        top: 21px;
+        bottom: 19px;
+      }
+
+      .logo-info {
+        justify-content: center !important;
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+
+    .contact-content {
+      p.contact-subject {
+        font: {
+          size: 22px;
+        }
+      }
+
+      p {
+        line-height: 13px;
+        margin-bottom: 8.5px;
+
+        font: {
+          size: 11px;
+        }
+      }
+
+    }
+
+    .btn-cus {
+      height: 30px;
+      width: 60px;
+    }
+  }
+
+
+  .contact__form {
+    padding: {
+      top: 57px;
+      bottom: 57px;
+    }
+
+    p {
+      font-size: 11px;
+    }
+
+    .wpcf7 {
+      span {
+        textarea.wpcf7-textarea {
+          height: 125px;
+        }
+      }
+    }
+
+    .wpcf7-spinner {
+      position: relative;
+      top: 9px;
+      background-color: $main-co;
+    }
+
+    .wpcf7-submit {
+      text-align: center;
+      font-size: 12px;
+    }
+
+    input {
+      font-size: 11px;
+    }
+
+    .contact-text {
+      p {
+        font-size: 11px !important;
+      }
+
+      img {
+        width: 27px;
+        height: 27px;
+      }
+    }
+  }
+
+
+
+}

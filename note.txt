@@ -1,0 +1,7 @@
+post-type.php
+123
+<<<<<<< HEAD
+a
+=======
+test auto depl 1
+>>>>>>> b9fdb346d719b711549946046af9a1384a372ed2
