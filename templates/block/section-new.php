@@ -25,18 +25,21 @@ $current_term_slug = $current_term->slug;
             $terms = get_terms([
                 'taxonomy' => 'category',
                 'hide_empty' => true,
-                'orderby'       => 'id',
+                'orderby' => 'id',
             ]);
             foreach ($terms as $term) {
-            ?>
+                ?>
                 <div>
-                    <a href="<?php echo get_home_url(); ?><?php echo  "/" . $term->taxonomy . "/" . $term->slug; ?>">
-                        <button id="btn-category" class="btn <?php echo ($current_term_slug == $term->slug) ? "active" : ""; ?>"><span><?php echo $term->name; ?></span>
+                    <a href="<?php echo get_home_url(); ?><?php echo "/" . $term->taxonomy . "/" . $term->slug; ?>">
+                        <button id="btn-category"
+                            class="btn <?php echo ($current_term_slug == $term->slug) ? "active" : ""; ?>"><span>
+                                <?php echo $term->name; ?>
+                            </span>
                         </button>
                     </a>
                 </div>
 
-            <?php
+                <?php
             }
             ?>
         </ul>
@@ -46,9 +49,9 @@ $current_term_slug = $current_term->slug;
             ?>
             <div class="left-side-title">
                 <h3><span>
-                    <!-- <?php echo $term_name ?> -->
-                    Tin nổi bật<tr></tr>
-                </span></h3>
+                        <!-- <?php echo $term_name ?> -->
+                        Tin nổi bật<tr></tr>
+                    </span></h3>
             </div>
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -67,10 +70,11 @@ $current_term_slug = $current_term->slug;
             );
             $the_new_special = new WP_Query($args);
 
-            if ($the_new_special->have_posts()) :
-                while ($the_new_special->have_posts()) : $the_new_special->the_post();
+            if ($the_new_special->have_posts()):
+                while ($the_new_special->have_posts()):
+                    $the_new_special->the_post();
                     $category = get_the_category();
-            ?>
+                    ?>
                     <li class="d-flex">
                         <div class="image-box position-relative">
                             <figure>
@@ -85,9 +89,9 @@ $current_term_slug = $current_term->slug;
                             </a>
                         </div>
                     </li>
-            <?php
+                    <?php
                 endwhile;
-            else :
+            else:
                 _e('Sorry, no posts matched your criteria.', 'textdomain');
             endif;
             wp_reset_postdata();

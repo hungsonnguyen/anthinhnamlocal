@@ -67,6 +67,13 @@ function jks_theme_scripts()
     wp_enqueue_style('fontawesome', $uri . '/assets/libs/fontawesome/all.min.css', array(), false);
     wp_enqueue_style('style', $uri . '/assets/css/style.css', array(), false);
 
+    //CSS leaflet
+    wp_enqueue_style('leaflet-style', $uri . '/assets/libs/leaflet/leaflet.css', array(), false);
+    wp_enqueue_style('leaflet-MarkerCluster-style', $uri . '/assets/libs/leaflet/leaflet-cluster/MarkerCluster.css', array(), false);
+    wp_enqueue_style('leaflet-MarkerCluster-default-style', $uri . '/assets/libs/leaflet/leaflet-cluster/MarkerCluster.Default.css', array(), false);
+    wp_enqueue_style('leaflet-Getcoder-style', $uri . '/assets/libs/leaflet/Control-Geocoder/Control.Geocoder.css', array(), false);
+
+
     // JS
     wp_enqueue_script('bootstrap-script', $uri . '/assets/libs/bootstrap/js/bootstrap.bundle.min.js', array(), false, true);
     wp_enqueue_script('carousel-script', $uri . '/assets/libs/owlcarousel/js/owl.carousel.min.js', array(), false, true);
@@ -75,6 +82,16 @@ function jks_theme_scripts()
     // wp_enqueue_script('isotope', $uri . '/assets/libs/isotope/isotope.pkgd.min.js', array(), false, true);
     wp_enqueue_script('main-script', $uri . '/assets/js/main.js', array('jquery'), false, true);
     wp_localize_script('main-script', 'jksRequest', array('ajaxurl' => admin_url('admin-ajax.php')));
+
+    //JS leaf let--------------------
+    wp_enqueue_script('leaflet-script', $uri . '/assets/libs/leaflet/leaflet.js', array(), false, true);
+    wp_enqueue_script('main-leaflet-script', $uri . '/assets/js/main-leaflet.js', array('jquery'), false, true);
+    //JS leaflet - cluster to group marker
+    wp_enqueue_script('main-leaflet-markercluster-script', $uri . '/assets/libs/leaflet/leaflet-cluster/leaflet.markercluster.js', array('jquery'), false, true);
+    //JS leaflet Geo - to search location
+    wp_enqueue_script('main-leaflet-Getcoder-script', $uri . '/assets/libs/leaflet/Control-Geocoder/geo.js', array('jquery'), false, true);
+
+
 }
 add_action('wp_enqueue_scripts', 'jks_theme_scripts');
 

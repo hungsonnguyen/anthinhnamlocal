@@ -18,6 +18,10 @@ get_header();
                 <p class="post-date"><i class="far fa-clock" style="color: #CC8056;"></i> <?php echo get_post_time('d/m/y'); ?></p>
                 <p class="post-title"><?php echo get_the_title() ?></p>
                 <p class="post-content"><?php the_content() ?></p>
+                <p><?php print_r(get_field('map'))?></p>
+                <p>Lat:<?php echo get_field("map")['lat']?></p>
+                <p>LNG:<?php echo get_field("map")['lng']?></p>
+
             </div>
         </div>
 

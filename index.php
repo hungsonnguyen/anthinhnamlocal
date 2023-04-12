@@ -522,18 +522,117 @@
                 </div>
             </div>
 
+            <!-- <div class="box-test">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <?php
+                        $args = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => -1,
+                        );
+                        $the_query_new = new WP_Query($args);
+                        if ($the_query_new->have_posts()) :
+                            while ($the_query_new->have_posts()) : $the_query_new->the_post();
+                                $category = get_the_category();
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="card card-cus w-100">
+                                    <a href="#" alt="">
+                                        <figure>
+                                            <a href=" <?php the_permalink(); ?>"><img class="card-img-top" src="<?php the_post_thumbnail_url('full'); ?>" alt=""></a>
+                                        </figure>
+                                    </a>
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-1 mb-md-2 mb-lg-2"><?php echo $category[0]->name ?></h4>
+                                        <p class="card-text-1 line-1 mb-1 mb-md-2 mb-lg-3"><?php echo get_the_title() ?></p>
+                                        <p class="card-text line-2"><?php echo excerpt(20) ?></p>
+                                        <div class="card-button">
+                                            <a class="link-card" href="<?php the_permalink() ?>">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                        <?php
+                            endwhile;
+                        else :
+                            _e('', 'textdomain');
+                        endif;
+                        wp_reset_postdata();
+                        ?>
+                
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div> -->
+                <div class="row test-box-swiper h-100">
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                            <?php
+                            $args = array(
+                                'post_type' => 'post',
+                                'posts_per_page' => -1,
+                            );
+                            $the_query_new = new WP_Query($args);
+                            if ($the_query_new->have_posts()) :
+                                while ($the_query_new->have_posts()) : $the_query_new->the_post();
+                                    $category = get_the_category();
+                            ?>
+                                <div class="swiper-slide w-100">
+                                    <div class="card card-cus">
+                                        <a href="#" alt="">
+                                            <figure>
+                                                <a href=" <?php the_permalink(); ?>"><img class="card-img-top" src="<?php the_post_thumbnail_url('full'); ?>" alt=""></a>
+                                            </figure>
+                                        </a>
+                                        <div class="card-body">
+                                            <h4 class="card-title mb-1 mb-md-2 mb-lg-2"><?php echo $category[0]->name ?></h4>
+                                            <p class="card-text-1 line-1 mb-1 mb-md-2 mb-lg-3"><?php echo get_the_title() ?></p>
+                                            <p class="card-text line-2"><?php echo excerpt(20) ?></p>
+                                            <div class="card-button">
+                                                <a class="link-card" href="<?php the_permalink() ?>">Xem thêm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            <?php
+                                endwhile;
+                            else :
+                                _e('', 'textdomain');
+                            endif;
+                            wp_reset_postdata();
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            <div class="text-center pt-2 pt-md-3 pt-lg-5">
+                <a href="category/tin_chuyen_nganh/" class="btn btn-cus btn-cus--outline">
+                    Xem thêm tin tức <i class="fal fa-long-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <section class="snh_atn-ournew auto-padding">
+        <div class="container">
+            <div class="row" data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="title">
+                    <h2 class="new-title text-center">CẬP NHẬT TIN TỨC MỖI NGÀY</h2>
+                    <h6 class="new-sub-title text-center pb-2 pb-md-3 pb-lg-5"><?php echo get_field('slogan_intro_home', 5); ?></h6>
+                </div>
+            </div>
+
             <div id="owl-snh-atn-our-new" class="owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
                 <?php
                 $args = array(
                     'post_type' => 'post',
                     'posts_per_page' => -1,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'category',
-                            'field' => 'slug',
-                            'terms' => 'tin_chuyen_nganh'
-                        ),
-                    ),
+                    // 'tax_query' => array(
+                    //     array(
+                    //         'taxonomy' => 'category',
+                    //         'field' => 'slug',
+                    //         'terms' => 'tin_chuyen_nganh'
+                    //     ),
+                    // ),
                     // 'posts_per_page' => '4',
                 );
                 $the_query_new = new WP_Query($args);

@@ -1,5 +1,37 @@
 (function ($) {
 	$(document).ready(function () {
+		// var swiper = new Swiper(".mySwiper", {
+		// 	slidesPerView: 3,
+		// 	grid: {
+		// 		rows: 2,
+		// 		fill: "row",
+
+		// 	},
+		// 	spaceBetween: 20,
+		// 	pagination: {
+		// 		el: ".swiper-pagination",
+		// 		clickable: true,
+		// 	},
+		// });
+
+		var swiper = new Swiper(".mySwiper1", {
+			effect: "cube",
+			grabCursor: true,
+			loop:true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false
+			},
+			cubeEffect: {
+				shadow: true,
+				slideShadows: true,
+				shadowOffset: 20,
+				shadowScale: 0.94,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
 		// ----------custome modal add to cart------------------
 
 		$(document).mouseup(function (e) {
