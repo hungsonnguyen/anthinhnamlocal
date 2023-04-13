@@ -53,7 +53,7 @@ $current_term_id = $current_term->term_id;
                                         </figure>
                                     </div>
                                     <div class="col-md-8">
-                                        <div class="card-body card-click-popup">
+                                        <div id="card-click-popup" class="card-body card-click-popup">
                                             <h5 class="card-title">
                                                 <?php echo get_the_title() ?>
                                             </h5>
